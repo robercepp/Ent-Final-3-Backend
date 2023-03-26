@@ -4,7 +4,7 @@ El proyecto consta de crear un e-commerce orientado a la venta de trabajos de il
 
 ## Comenzando 🚀
 
-esta entrega está desarrollada de acuerdo con las pautas de la segunda entrega final del curso de Backend de coderhouse. comisión 40280
+esta entrega está desarrollada de acuerdo con las pautas de la tercera entrega final del curso de Backend de coderhouse. comisión 40280
 url: "https://github.com/robercepp/proyecto-final-backend"
 
 ### Pre-requisitos 📋
