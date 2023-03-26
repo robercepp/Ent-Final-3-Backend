@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "timestamp": 1672184902015,
+    "productos": [
+      {
+        "id": 6,
+        "timestamp": 1672089133445,
+        "nombre": "Stickers de Chicas",
+        "detalle": "Selección de 20 stickers con motivos de chicas y moda.",
+        "codigo": "sticker",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-fecd4.appspot.com/o/resources%2Fimagenes%2Fchicas.webp?alt=media&token=7504acaf-c61c-4ee5-b235-69ea4ad119e9",
+        "precio": 3,
+        "stock": 4
+      },
+      {
+        "id": 2,
+        "timestamp": 1672089129423,
+        "nombre": "Libreta de Six Fanarts",
+        "detalle": "Libreta de 80 hojas, tamaño A4 con motivos de Six Fanarsts, hoja a cuadros o a rayas.",
+        "codigo": "libreta",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-fecd4.appspot.com/o/resources%2Fimagenes%2Fsixfanarts.webp?alt=media&token=695eaf91-f7d0-4b58-9289-141322b92248",
+        "precio": 10.5,
+        "stock": "3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "timestamp": 1672195369927,
+    "productos": [
+      {
+        "id": 2,
+        "timestamp": 1672089129423,
+        "nombre": "Libreta de Six Fanarts",
+        "detalle": "Libreta de 80 hojas, tamaño A4 con motivos de Six Fanarsts, hoja a cuadros o a rayas.",
+        "codigo": "libreta",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/react-34755-2022-fecd4.appspot.com/o/resources%2Fimagenes%2Fsixfanarts.webp?alt=media&token=695eaf91-f7d0-4b58-9289-141322b92248",
+        "precio": 10.5,
+        "stock": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "timestamp": 1672433868745,
+    "productos": []
+  }
+]

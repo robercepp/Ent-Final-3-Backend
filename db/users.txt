@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nombre": "Robertino",
+    "apellido": "Cepparo",
+    "usuario": "robercepp",
+    "email": "robercepp@hotmail.com",
+    "contrasena": 1234,
+    "admin": true
+  },
+  {
+    "id": 2,
+    "nombre": "Ernesto",
+    "apellido": "Guevara",
+    "usuario": "ernest101",
+    "email": "ernesto_guevara@gmail.com",
+    "contrasena": 1234,
+    "admin": false
+  },
+  {
+    "nombre": "Marcelo",
+    "apellido": "Garay",
+    "usuario": "margara",
+    "email": "marcegaray@gmail.com",
+    "contrasena": 1234124124,
+    "admin": "false",
+    "id": 3
+  }
+]
