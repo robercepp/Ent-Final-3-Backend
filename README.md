@@ -47,7 +47,7 @@ nota: las imágenes admitidas son solamente .jpg por el momento.
 
 - 6 Cuando un usuario confirma el pedido de productos almacenados en el carrito, se notifica dicho suceso mediante un email emitido desde una cuenta Gmail al administrador, y a su vez se envía un SMS a un número de telefono informando que un usuario dado ha solicitado productos (se listan los productos y cantidades) y que la solicitud se encuentra en proceso. 
 
-- 7 El servidor trabaja con MongoDBAtlas para administrar las cargas, altas, bajas, sesiones y carritos de los usuarios. Actualmente se encuentra cargado y siendo ejecutado en el servicio "railway" link: "https://github.com/robercepp/proyecto-final-backend"
+- 7 El servidor trabaja con MongoDBAtlas para administrar las cargas, altas, bajas, sesiones y carritos de los usuarios. Actualmente se encuentra cargado y siendo ejecutado en el servicio "railway" link: "https://ent-final-3-backend-production.up.railway.app"
 
 - 8 El servidor cuenta con un inicio en modo "fork" o en modo "cluster" así también como un parámetro para la elección del puerto en el cuál se ejecutará.
 ej: "node server.js -p 8080 -m FORK" (este comando ejecuta el servidor escuchando en el puerto 8080 y en modo fork).
