@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>{{titulo}}</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
@@ -23,7 +24,7 @@
       </select>
       <label for="nombre">ingrese su nombre</label>
       <input
-        class="input"
+        class="input form-nombre"
         type="text"
         id="nombre"
         name="nombre"
@@ -32,7 +33,7 @@
       />
       <label for="apellido">ingrese su apellido</label>
       <input
-        class="input"
+        class="input form-apellido"
         type="text"
         id="apellido"
         name="apellido"
@@ -40,10 +41,10 @@
         required
       />
       <label for="edad">ingrese su edad</label>
-      <input class="input" type="number" id="edad" name="edad" required />
+      <input class="input form-edad" type="number" id="edad" name="edad" required />
       <label for="direccion">ingrese su dirección</label>
       <input
-        class="input"
+        class="input form-direccion"
         type="text"
         id="direccion"
         name="direccion"
@@ -52,7 +53,7 @@
       />
       <label for="telefono">ingrese su número de telefono</label>
       <input
-        class="input"
+        class="input form-telefono"
         type="tel"
         id="telefono"
         name="telefono"
@@ -63,7 +64,7 @@
       />
       <label for="email">ingrese su email</label>
       <input
-        class="input"
+        class="input form-email"
         type="email"
         id="email"
         name="email"
@@ -72,7 +73,7 @@
       />
       <label for="email2">repita su email</label>
       <input
-        class="input"
+        class="input form-email2"
         type="email"
         id="email2"
         name="email2"
@@ -81,7 +82,7 @@
       />
       <label for="password">ingrese su password</label>
       <input
-        class="input"
+        class="input form-password"
         type="password"
         id="password"
         name="password"
@@ -89,7 +90,7 @@
       />
       <label for="password2">repita su password</label>
       <input
-        class="input"
+        class="input form-password2"
         type="password"
         id="password2"
         name="password2"
@@ -98,7 +99,7 @@
       <label class="fileInp" for="archivo">+ subir avatar +</label>
       <span class="filetext"></span>
       <input
-        class="inputFile"
+        class="inputFile form-file"
         type="file"
         id="archivo"
         name="archivo"
@@ -111,6 +112,7 @@
     <button class="btn" onclick="location.href='/login'" type="button">
       Ir a Login
     </button>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/register.js"></script>
   </body>
 </html>

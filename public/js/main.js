@@ -94,6 +94,7 @@ async function mainBody() {
     contextMenu.innerHTML = cartOptions;
   }
   productos.forEach((producto) => {
+    const addValues = {id : producto.id, nombre: producto.nombre}
     document.createElement("div");
     const contenido = `
 <div class="card-container">
@@ -108,7 +109,7 @@ async function mainBody() {
     </div>
     <div class="form">
         <input class="input-number" id="cant${producto.id}" onkeydown="return false" step="1" min="1" max="${producto.stock}" value="1" type="number" name="cantidad">
-        <input class="btn" type="submit" onclick="addToCart(${producto.id})" name="boton" value="agregar al carrito">
+        <input class="btn" type="submit" onclick="addToCart(${producto.id},'${producto.nombre}')", name="boton" value="agregar al carrito">
     </div>
     <input class="btn" type="button" onclick="detallarProducto(${producto.id})" name="boton" value="ver producto">
 </div>
@@ -301,7 +302,7 @@ async function detallarProducto(id) {
   }" value="1" type="number" name="cantidad">
         <input class="btn" type="submit" onclick="addToCart(${
           producto.id
-        })" name="boton" value="agregar al carrito">
+        }, '${producto.nombre}')" name="boton" value="agregar al carrito">
     </div>
     <div class="form">
     <input style="display:${admin()}" class="btn" type="button" onclick="actualizarProducto(${
@@ -369,7 +370,7 @@ async function createCart(id) {
   seeCart();
 }
 
-async function addToCart(id) {
+async function addToCart(id, nombre) {
   const url = `api/carrito/${id}/productos`;
   const payload = {
     cantidad: parseInt(document.getElementById(`cant${id}`).value),
@@ -388,7 +389,7 @@ async function addToCart(id) {
       .then((response) => console.log(response.status))
       .catch((err) => console.log(err));
     Toastify({
-      text: `Producto ${id} añadido al carrito`,
+      text: `${nombre} añadido al carrito`,
       className: "info",
       position: "right",
       gravity: "bottom",
@@ -505,7 +506,7 @@ async function seeCart() {
                         <strong>-stock:</strong> ${producto.stock}
                         </p>
                     </div>
-                    <input class="btn" type="button" onclick="quitarDelCarrito(${producto.id})" name="boton" value="quitar del carrito">
+                    <input class="btn" type="button" onclick="quitarDelCarrito(${producto.id}, '${producto.nombre}')" name="boton" value="quitar del carrito">
                 </div>
                 `;
         main.innerHTML += contenido;
@@ -514,7 +515,7 @@ async function seeCart() {
   }
 }
 
-async function quitarDelCarrito(id) {
+async function quitarDelCarrito(id, nombre) {
   const url = `api/carrito/${userId}/productos/${id}/`;
   const options = {
     method: "DELETE",
@@ -526,7 +527,7 @@ async function quitarDelCarrito(id) {
     .then((response) => console.log(response.status))
     .catch((err) => console.log(err));
   Toastify({
-    text: `Producto ${id} removido del carrito`,
+    text: `${nombre} removido del carrito`,
     className: "info",
     position: "right",
     gravity: "bottom",

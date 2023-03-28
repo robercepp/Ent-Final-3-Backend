@@ -15,11 +15,57 @@ async function newUser() {
   const password2 = document.getElementById("password2").value;
   const admin = document.getElementById(`admin`).value;
   const file = document.querySelector(".inputFile").files[0];
+
+  if(!nombre) {
+    tostada ("escriba su nombre")
+    document.querySelector('.form-nombre').classList.add('flasher')
+  } 
+  if (!apellido) {
+    tostada ("escriba su apellido")
+    document.querySelector('.form-apellido').classList.add('flasher')
+  }
+  if(!edad) {
+    tostada ("ingrese su edad")
+    document.querySelector('.form-edad').classList.add('flasher')
+  }
+  if (!direccion) {
+    tostada ("ingrese su domicilio")
+    document.querySelector('.form-direccion').classList.add('flasher')
+  }
+  if (!telefono) {
+    tostada ("ingrese un telefono")
+    document.querySelector('.form-telefono').classList.add('flasher')
+  }
+  if (!email) {
+    tostada ("ingrese un e-mail")
+    document.querySelector('.form-email').classList.add('flasher')
+  }
+  if (!email2) {
+    tostada ("repita su e-mail")
+    document.querySelector('.form-email2').classList.add('flasher')
+  }
   if (email !== email2) {
-    console.log("Los campos de Email deben ser iguales.");
-  } else if (password !== password2) {
-    console.log("Las contraseñas no coinciden");
-  } else {
+    tostada ("los campos de e-mail no coinciden")
+    document.querySelector('.form-email').classList.add('flasher')
+    document.querySelector('.form-email2').classList.add('flasher')
+  }
+  if (!password) {
+    tostada ("ingrese una contraseña")
+    document.querySelector('.form-password').classList.add('flasher')
+  }
+  if (!password2) {
+    tostada ("repita su contraseña")
+    document.querySelector('.form-password2').classList.add('flasher')
+  }
+  if (password !== password2) {
+    tostada ("las contraseñas no coinciden")
+    document.querySelector('.form-password').classList.add('flasher')
+    document.querySelector('.form-password2').classList.add('flasher')
+  }
+  if (!file) {
+    tostada ("ingrese un avatar (.jpg)")
+  }
+  if(nombre && apellido && edad && direccion && telefono && email && email2 && email == email2 && password && password2 && password == password2 && file) {
     const formData = new FormData();
     formData.append("avatar", file, email + ".jpg");
     formData.append("nombre", nombre);
@@ -77,4 +123,19 @@ function getFile(e) {
   fileItem = e.target.files[0];
   fileName = fileItem.name;
   fileText.innerHTML = fileName;
+}
+
+function tostada (mensaje) {
+  Toastify({
+    text: mensaje,
+    className: "info",
+    position: "right",
+    gravity: "bottom",
+    duration: 5000,
+    close: true,
+    style: {
+      color: "white",
+      background: "red",
+    },
+  }).showToast();
 }

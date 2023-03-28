@@ -109,6 +109,7 @@ object-fit:contain;
 }
 
 .input{
+    border: 2px solid grey;
     text-align: center;
 }
 
@@ -299,4 +300,14 @@ object-fit:contain;
     color: darkblue;
 }
 
+.flasher {
+animation: blink 5s;
+}
 
+@keyframes blink {
+0% {border: 1px solid red;}
+25% {border: 1px solid white;}
+50% {border: 1px solid red;}
+75% {border: 1px solid white;}
+100% {border: 1px solid red;}
+}
